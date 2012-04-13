@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/reset"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="60px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="reset"
+            android:text="Reset" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="382dp"
+        android:layout_weight="6.02" >
+
+        <TextView
+            android:id="@+id/textViewValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="150px" />
+
+        <TextView
+            android:id="@+id/textViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewValue"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#ff202020"
+        android:layout_height="47dp" >
+
+        <Button
+            android:id="@+id/d4"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:onClick="roll"
+            android:tag="4"
+            android:text="d4" />
+
+        <Button
+            android:id="@+id/d6"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/d4"
+            android:onClick="roll"
+            android:tag="6"
+            android:text="d6" />
+
+        <Button
+            android:id="@+id/d8"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/d6"
+            android:onClick="roll"
+            android:tag="8"
+            android:text="d8" />
+
+        <Button
+            android:id="@+id/d10"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/d8"
+            android:onClick="roll"
+            android:tag="10"
+            android:text="d10" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff202020" >
+
+        <Button
+            android:id="@+id/d12"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:onClick="roll"
+            android:tag="12"
+            android:text="d12" />
+
+        <Button
+            android:id="@+id/coin"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="flip"
+            android:text="Coin" />
+
+        <Button
+            android:id="@+id/d20"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/d12"
+            android:onClick="roll"
+            android:tag="20"
+            android:text="d20" />
+
+        <Button
+            android:id="@+id/d100"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/d20"
+            android:onClick="roll"
+            android:tag="100"
+            android:text="d100" />
+
+    </RelativeLayout>
+
+</LinearLayout>
