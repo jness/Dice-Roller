@@ -15,8 +15,20 @@
             android:layout_height="60px"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:onClick="reset"
             android:text="Reset" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:singleLine="true"
+            android:hint="2d6"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
 
     </RelativeLayout>
 
@@ -59,8 +71,7 @@
             android:layout_width="120px"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:onClick="roll"
-            android:tag="4"
+            android:tag="1d4"
             android:text="d4" />
 
         <Button
@@ -69,8 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d4"
-            android:onClick="roll"
-            android:tag="6"
+            android:tag="1d6"
             android:text="d6" />
 
         <Button
@@ -79,8 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d6"
-            android:onClick="roll"
-            android:tag="8"
+            android:tag="1d8"
             android:text="d8" />
 
         <Button
@@ -89,8 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d8"
-            android:onClick="roll"
-            android:tag="10"
+            android:tag="1d10"
             android:text="d10" />
 
     </RelativeLayout>
@@ -104,8 +112,7 @@
             android:id="@+id/d12"
             android:layout_width="120px"
             android:layout_height="wrap_content"
-            android:onClick="roll"
-            android:tag="12"
+            android:tag="1d12"
             android:text="d12" />
 
         <Button
@@ -114,7 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:onClick="flip"
+            android:tag="coin"
             android:text="Coin" />
 
         <Button
@@ -123,8 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/d12"
-            android:onClick="roll"
-            android:tag="20"
+            android:tag="1d20"
             android:text="d20" />
 
         <Button
@@ -133,8 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d20"
-            android:onClick="roll"
-            android:tag="100"
+            android:tag="1d100"
             android:text="d100" />
 
     </RelativeLayout>
