@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="hello">Hello World, DiceRollerActivity!</string>
+    
     <string name="app_name">Dice Roller</string>
+    <string name="reset">Reset</string>
+    <string name="d4">d4</string>
+    <string name="d6">d6</string>
+    <string name="d8">d8</string>
+    <string name="d10">d10</string>
+    <string name="d12">d12</string>
+    <string name="d20">d20</string>
+    <string name="d100">d100</string>
+    <string name="coin">Coin</string>
+    <string name="texthint">2d6</string>
 
 </resources>
