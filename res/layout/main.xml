@@ -12,7 +12,7 @@
             android:id="@+id/reset"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="60px"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:text="Reset" />
@@ -34,7 +34,7 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="382dp"
+        android:layout_height="0dip"
         android:layout_weight="6.02" >
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_centerVertical="true"
             android:text=""
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="150px" />
+            android:textSize="85dp" />
 
         <TextView
             android:id="@+id/textViewLabel"
@@ -68,7 +68,7 @@
 
         <Button
             android:id="@+id/d4"
-            android:layout_width="120px"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:tag="1d4"
@@ -76,7 +76,7 @@
 
         <Button
             android:id="@+id/d6"
-            android:layout_width="120px"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d4"
@@ -85,7 +85,7 @@
 
         <Button
             android:id="@+id/d8"
-            android:layout_width="120px"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d6"
@@ -94,7 +94,7 @@
 
         <Button
             android:id="@+id/d10"
-            android:layout_width="120px"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d8"
@@ -110,14 +110,14 @@
 
         <Button
             android:id="@+id/d12"
-            android:layout_width="120px"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:tag="1d12"
             android:text="d12" />
 
         <Button
             android:id="@+id/coin"
-            android:layout_width="120px"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
@@ -126,7 +126,7 @@
 
         <Button
             android:id="@+id/d20"
-            android:layout_width="120px"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/d12"
@@ -135,7 +135,7 @@
 
         <Button
             android:id="@+id/d100"
-            android:layout_width="120px"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d20"
