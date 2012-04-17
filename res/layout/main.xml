@@ -3,29 +3,29 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
+
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/reset"
-            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/roll"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:text="@string/reset" />
-
+            android:text="@string/roll" />
+
         <EditText
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:singleLine="true"
+            android:layout_toLeftOf="@+id/roll"
+            android:ems="10"
             android:hint="@string/texthint"
-            android:ems="10" >
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
