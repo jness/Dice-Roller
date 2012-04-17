@@ -28,8 +28,6 @@ public class DiceRollerActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        this.dicetools = new DiceUtils();
-        
         // link to each of our textviews
         this.value = (TextView) findViewById(R.id.textViewValue);
     	this.label = (TextView) findViewById(R.id.textViewLabel);
@@ -66,10 +64,11 @@ public class DiceRollerActivity extends Activity implements OnClickListener {
     	// handle user input
     	if (this.text.getId() == v.getId()) {
     		if (this.text.getText().length() != 0) {
-    			String label_text = this.text.getText().toString();
-    			String results = this.dicetools.diceNotation(label_text);
-    			label.setText(this.dicetools.diceNotationLabel(label_text));
-    			value.setText(results);
+    			String input = this.text.getText().toString();
+        		this.dicetools = new DiceUtils();
+        		this.dicetools.rollDice(input);
+        		label.setText(this.dicetools.getLabel());
+        		value.setText(this.dicetools.getValue());
     			this.text.setText("");
     		}
     			
@@ -80,16 +79,18 @@ public class DiceRollerActivity extends Activity implements OnClickListener {
     	
     	// handle flip coin
     	} else if (this.coin.getId() == v.getId()) {
-    		String results = this.dicetools.flip();
-    		label.setText(v.getTag().toString());
-    		value.setText(results);
+    		this.dicetools = new DiceUtils();
+    		this.dicetools.flipCoin();
+    		label.setText(this.dicetools.getLabel());
+    		value.setText(this.dicetools.getValue());
     		
     	// handle dice buttons
     	} else {
-    		String label_text = v.getTag().toString();
-    		String results = this.dicetools.roll(label_text);
-    		label.setText(label_text);
-    		value.setText(results);
+    		String input = v.getTag().toString();
+    		this.dicetools = new DiceUtils();
+    		this.dicetools.rollDice(input);
+    		label.setText(this.dicetools.getLabel());
+    		value.setText(this.dicetools.getValue());
     		
     	}	
     }

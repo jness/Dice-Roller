@@ -7,76 +7,46 @@ import java.util.regex.MatchResult;
 import android.widget.TextView;
 
 public class DiceUtils {
-	
 	private String value;
-
-    public String flip() {	    	
-    	// random boolean
+	private String label;
+	private int dice_count;
+	private int dice_size;
+	
+	public String getValue() {
+		return this.value;
+	}
+	
+	public String getLabel() {
+		return this.label;
+	}
+	
+    public void flipCoin() {	    	
     	Random rand = new Random();
     	boolean x = rand.nextBoolean();
-    	
+    	this.label = "coin";
     	if (x) {
-    		value = "Heads";
+    		this.value = "Heads";
     	} else {
-    		value = "Tails";
+    		this.value = "Tails";
     	}
-    	return value;
     }
     
-    public String diceNotation(String notation) {
-    	int total = new Integer(0);
-    	Scanner s = new Scanner(notation);
-    	try {
-    		s.findInLine("(\\d+)d(\\d+)");
-    		MatchResult result = s.match();
-    		int count = Integer.parseInt(result.group(1));
-    		int size = Integer.parseInt(result.group(2));
-    		String s_dice = result.group(1) + "d" + result.group(2);
-
-    		// loop over our count and roll dice
-    		for (int i=1; i<=count; i++) {
-    			String x = this.roll(s_dice);
-    			total = total + Integer.parseInt(x);
-    		}
-    		String s_total = Integer.toString(total);
-    		return s_total;
-        
-    	} catch(Exception e3) {
-    		String s_error = "Error..";
-        	return s_error;
+    public void rollDice(String input) {
+    	this.getDice(input);
+    	int total = 0;
+    	Random rand = new Random();
+    	for (int i=1; i<=this.dice_count; i++) {
+    		total = total + rand.nextInt(this.dice_size) + 1;
     	}
-        	
+   		this.value = Integer.toString(total);
     }
     
-    public String diceNotationLabel(String notation) {
-     	int total = new Integer(0);
-    	Scanner s = new Scanner(notation);
-    	try {
-    		s.findInLine("(\\d+)d(\\d+)");
-    		MatchResult result = s.match();
-    		String count = result.group(1);
-    		String size = result.group(2);
-    		String s_dice = result.group(1) + "d" + result.group(2);
-    		return s_dice;
-        
-    	} catch(Exception e3) {
-    		String s_error = "Error..";
-        	return s_error;
-    	}
-        	
-    }
-    	
-    public String roll(String dice) {
-    	Scanner s = new Scanner(dice);
+    public void getDice(String input) {
+    	Scanner s = new Scanner(input);
     	s.findInLine("(\\d+)d(\\d+)");
     	MatchResult result = s.match();
-    	int size = Integer.parseInt(result.group(2));
-
-    	Random rand = new Random();
-   		int x = rand.nextInt(size) + 1;
-
-    	String s_total = Integer.toString(x);
-   		return s_total;
+    	this.dice_count = Integer.parseInt(result.group(1));
+    	this.dice_size = Integer.parseInt(result.group(2));	
+    	this.label = this.dice_count + "d" + this.dice_size;
     }
-
 }
