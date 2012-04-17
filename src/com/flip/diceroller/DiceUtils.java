@@ -4,8 +4,6 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.regex.MatchResult;
 
-import android.widget.TextView;
-
 public class DiceUtils {
 	private String value;
 	private String label;
@@ -41,7 +39,7 @@ public class DiceUtils {
    		this.value = Integer.toString(total);
     }
     
-    public void getDice(String input) {
+    private void getDice(String input) {
     	try {
     		Scanner s = new Scanner(input);
     		s.findInLine("(\\d+)d(\\d+)");

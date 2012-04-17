@@ -6,12 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.view.View.OnClickListener;
-import android.view.View.OnKeyListener;
-import android.view.KeyEvent;
 import android.view.View;
-
-import java.util.Scanner;
-import java.util.regex.MatchResult;
 
 import com.flip.diceroller.DiceUtils;
 
