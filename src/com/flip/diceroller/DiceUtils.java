@@ -42,11 +42,15 @@ public class DiceUtils {
     }
     
     public void getDice(String input) {
-    	Scanner s = new Scanner(input);
-    	s.findInLine("(\\d+)d(\\d+)");
-    	MatchResult result = s.match();
-    	this.dice_count = Integer.parseInt(result.group(1));
-    	this.dice_size = Integer.parseInt(result.group(2));	
-    	this.label = this.dice_count + "d" + this.dice_size;
+    	try {
+    		Scanner s = new Scanner(input);
+    		s.findInLine("(\\d+)d(\\d+)");
+    		MatchResult result = s.match();
+    		this.dice_count = Integer.parseInt(result.group(1));
+    		this.dice_size = Integer.parseInt(result.group(2));	
+    		this.label = this.dice_count + "d" + this.dice_size;
+    	} catch(Exception e) {
+    		this.label = "error";
+    	}
     }
 }
