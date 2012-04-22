@@ -4,33 +4,34 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-        <Button
-            android:id="@+id/roll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:text="@string/roll" />
-
         <EditText
             android:id="@+id/editText"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_toLeftOf="@+id/roll"
             android:ems="10"
             android:hint="@string/texthint"
+            android:layout_weight=".25"
             android:singleLine="true" >
-
             <requestFocus />
         </EditText>
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/roll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight=".75"
+            android:text="@string/roll" />
+        
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -61,79 +62,87 @@
 
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:background="#ff202020"
-        android:layout_height="47dp" >
+        android:layout_height="wrap_content"
+        android:background="#ff202020" >
 
         <Button
             android:id="@+id/d4"
-            android:layout_width="80dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_weight=".25"
             android:text="@string/d4" />
 
         <Button
             android:id="@+id/d6"
-            android:layout_width="80dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d4"
+            android:layout_weight=".25"
             android:text="@string/d6" />
 
         <Button
             android:id="@+id/d8"
-            android:layout_width="80dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d6"
+            android:layout_weight=".25"
             android:text="@string/d8" />
 
         <Button
             android:id="@+id/d10"
-            android:layout_width="80dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d8"
+            android:layout_weight=".25"
             android:text="@string/d10" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ff202020" >
 
         <Button
             android:id="@+id/d12"
-            android:layout_width="80dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight=".25"
             android:text="@string/d12" />
 
         <Button
             android:id="@+id/coin"
-            android:layout_width="80dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
+            android:layout_weight=".25"
             android:text="@string/coin" />
 
         <Button
             android:id="@+id/d20"
-            android:layout_width="80dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/d12"
+            android:layout_weight=".25"
             android:text="@string/d20" />
 
         <Button
             android:id="@+id/d100"
-            android:layout_width="80dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d20"
+            android:layout_weight=".25"
             android:text="@string/d100" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
