@@ -117,15 +117,6 @@
             android:text="@string/d12" />
 
         <Button
-            android:id="@+id/coin"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_weight=".25"
-            android:text="@string/coin" />
-
-        <Button
             android:id="@+id/d20"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -143,6 +134,16 @@
             android:layout_weight=".25"
             android:text="@string/d100" />
 
+       <Button
+            android:id="@+id/coin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight=".25"
+            android:text="@string/coin" />
+        
+        
     </LinearLayout>
 
 </LinearLayout>
