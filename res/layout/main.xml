@@ -29,6 +29,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_weight=".75"
+            android:onClick="typeDie"
             android:text="@string/roll" />
         
     </LinearLayout>
@@ -67,39 +68,47 @@
         android:layout_height="wrap_content"
         android:background="#ff202020" >
 
-        <Button
+        <com.flip.diceroller.DieButton
             android:id="@+id/d4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_weight=".25"
+            android:onClick="clickDie"
+            android:tag="4"
             android:text="@string/d4" />
 
-        <Button
+        <com.flip.diceroller.DieButton
             android:id="@+id/d6"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d4"
             android:layout_weight=".25"
+            android:onClick="clickDie"
+            android:tag="6"
             android:text="@string/d6" />
 
-        <Button
+        <com.flip.diceroller.DieButton
             android:id="@+id/d8"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d6"
             android:layout_weight=".25"
+            android:onClick="clickDie"
+            android:tag="8"
             android:text="@string/d8" />
 
-        <Button
+        <com.flip.diceroller.DieButton
             android:id="@+id/d10"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d8"
             android:layout_weight=".25"
+            android:onClick="clickDie"
+            android:tag="10"
             android:text="@string/d10" />
 
     </LinearLayout>
@@ -109,38 +118,46 @@
         android:layout_height="wrap_content"
         android:background="#ff202020" >
 
-        <Button
+        <com.flip.diceroller.DieButton
             android:id="@+id/d12"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".25"
+            android:onClick="clickDie"
+            android:tag="12"
             android:text="@string/d12" />
 
-        <Button
+        <com.flip.diceroller.DieButton
             android:id="@+id/d20"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/d12"
             android:layout_weight=".25"
+            android:onClick="clickDie"
+            android:tag="20"
             android:text="@string/d20" />
 
-        <Button
+        <com.flip.diceroller.DieButton
             android:id="@+id/d100"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d20"
             android:layout_weight=".25"
+            android:onClick="clickDie"
+            android:tag="100"
             android:text="@string/d100" />
 
-       <Button
+       <com.flip.diceroller.DieButton
             android:id="@+id/coin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_weight=".25"
+            android:onClick="clickCoin"
+            android:tag="2"
             android:text="@string/coin" />
         
         
