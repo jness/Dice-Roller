@@ -11,18 +11,21 @@ public class Die {
 	  this.sides = sides;
 	 } 
 	
+	public int getIntValue() {
+		return this.value;
+	}
+	
+	public String getStrValue() {
+		return Integer.toString(this.value);
+	}
+	
 	public int getSides() {
 		return this.sides;
 	}
 	
-	public int getValue() {
-		return this.value;
-	}
-	
-    public int roll() {
+    public void roll() {
     	Random rand = new Random();
     	this.value = rand.nextInt(this.sides) + 1;
-    	return this.value;
     	}
     
 }

@@ -11,6 +11,7 @@ import java.util.regex.MatchResult;
 
 import com.flip.diceroller.Die;
 import com.flip.diceroller.DieButton;
+import com.flip.diceroller.Dieset;
 
 
 public class DiceRollerActivity extends Activity {
@@ -30,45 +31,28 @@ public class DiceRollerActivity extends Activity {
     
     public void typeDie(View btn) {
     	if (text.getText().length() != 0) {
-    		try {
-	    		Scanner s = new Scanner(text.getText().toString());
-	    		s.findInLine("(\\d+)d(\\d+)");
-	    		MatchResult result = s.match();
-	    		
-	    		int quantity = Integer.parseInt(result.group(1));
-	    		int size = Integer.parseInt(result.group(2));
-	    		int total = 0;
-	    		
-	    		Die die = new Die(size);
-	    		for (int i=1; i<=quantity; i++) {
-	    			die.roll();
-	    			total += die.getValue();
-	    		}
-	    		
-	    		label.setText(quantity + "d" + size);
-	    		value.setText(Integer.toString(total));
-	    		
-			} catch(Exception e) {
-	    		label.setText("error");
-	    		value.setText("0");
-			}
+	    		Dieset dieset = new Dieset(text.getText().toString());
+	    		dieset.roll();
+	    		int total = dieset.getIntValue();
+	    		label.setText(dieset.getLabel());
+	    		value.setText(dieset.getStrValue());
     	}
     }
     
-    public void clickDie(View btn) {
+    public void onClickDie(View btn) {
     	DieButton button = (DieButton) btn; 
     	Die die = (Die) button.getDie();
     	die.roll();
     	label.setText(button.getText().toString());
-    	value.setText(Integer.toString(die.getValue()));  
+    	value.setText(die.getStrValue());  
     }
 
-    public void clickCoin(View btn) {
-    	DieButton button = (DieButton) btn; 
-    	Die coin = (Die) button.getDie();
+    public void onClickCoin(View btn) {
+    	CoinButton button = (CoinButton) btn; 
+    	Coin coin = (Coin) button.getCoin();
     	coin.roll();
     	label.setText(button.getText().toString());
-    	value.setText(coin.getValue() -1 != 0 ? "Heads" : "Tails");  
+    	value.setText(coin.getValue());  
     }
     
 }

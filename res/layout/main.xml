@@ -18,6 +18,7 @@
             android:ems="10"
             android:hint="@string/texthint"
             android:layout_weight=".25"
+            android:maxLength="6"
             android:singleLine="true" >
             <requestFocus />
         </EditText>
@@ -74,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_weight=".25"
-            android:onClick="clickDie"
+            android:onClick="onClickDie"
             android:tag="4"
             android:text="@string/d4" />
 
@@ -85,7 +86,7 @@
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d4"
             android:layout_weight=".25"
-            android:onClick="clickDie"
+            android:onClick="onClickDie"
             android:tag="6"
             android:text="@string/d6" />
 
@@ -96,7 +97,7 @@
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d6"
             android:layout_weight=".25"
-            android:onClick="clickDie"
+            android:onClick="onClickDie"
             android:tag="8"
             android:text="@string/d8" />
 
@@ -107,7 +108,7 @@
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d8"
             android:layout_weight=".25"
-            android:onClick="clickDie"
+            android:onClick="onClickDie"
             android:tag="10"
             android:text="@string/d10" />
 
@@ -123,7 +124,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".25"
-            android:onClick="clickDie"
+            android:onClick="onClickDie"
             android:tag="12"
             android:text="@string/d12" />
 
@@ -134,7 +135,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/d12"
             android:layout_weight=".25"
-            android:onClick="clickDie"
+            android:onClick="onClickDie"
             android:tag="20"
             android:text="@string/d20" />
 
@@ -145,18 +146,18 @@
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/d20"
             android:layout_weight=".25"
-            android:onClick="clickDie"
+            android:onClick="onClickDie"
             android:tag="100"
             android:text="@string/d100" />
 
-       <com.flip.diceroller.DieButton
+       <com.flip.diceroller.CoinButton
             android:id="@+id/coin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_weight=".25"
-            android:onClick="clickCoin"
+            android:onClick="onClickCoin"
             android:tag="2"
             android:text="@string/coin" />
         
