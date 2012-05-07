@@ -45,12 +45,6 @@ public class DiceRollerActivity extends Activity {
 		wl.release();
 	}
 
-	@Override
-	protected void onDestroy() {
-		// TODO Auto-generated method stub
-		super.onDestroy();
-		wl.release();
-	}
 
 	public void typeDie(View btn) {
     	if (text.getText().length() != 0) {
